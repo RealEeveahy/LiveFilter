@@ -62,3 +62,8 @@ class Camera():
       stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
       cv2.imwrite(f"MAE_{stamp}.png", self.frame)
       print("Took a photo!")
+
+if __name__ == "__main__":
+   root = Tk()
+   camera = Camera(root)
+   camera.start()
